@@ -563,6 +563,250 @@ h1, h2, h3, h4, .serif-title {
 }
 
 /* --------------------------------------------------------------------------
+   SOCIAL RESPONSIBILITY SECTION
+   -------------------------------------------------------------------------- */
+.social-responsibility-section {
+  padding: 2rem 0 1rem;
+  background: transparent;
+}
+
+.sr-header {
+  margin-bottom: 2.25rem;
+}
+
+.sr-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(3rem, 6vw, 7rem);
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  color: var(--ink-primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sr-item {
+  padding-top: 0.25rem;
+}
+
+.sr-item h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 2.8vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--ink-primary);
+  margin: 0 0 1.8rem;
+}
+
+.sr-row {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 18px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+.sr-label,
+.sr-colon,
+.sr-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.35;
+  color: var(--ink-primary);
+}
+
+.sr-label {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.sr-colon {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.sr-value {
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  max-width: 1040px;
+}
+
+.sr-row-objective .sr-value {
+  font-weight: 500;
+}
+
+.sr-divider {
+  width: 100%;
+  border-top: 2px solid rgba(18, 24, 38, 0.7);
+  margin: 2.6rem 0 2.1rem;
+}
+
+@media (max-width: 767.98px) {
+  .social-responsibility-section {
+    padding-top: 2.5rem;
+  }
+
+  .sr-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .sr-label,
+  .sr-colon {
+    display: inline-block;
+  }
+
+  .sr-colon {
+    display: none;
+  }
+
+  .sr-value {
+    max-width: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SOCIAL RESPONSIBILITY — premium cards
+   -------------------------------------------------------------------------- */
+.sr-design {
+  padding: 1rem 0 2rem;
+}
+
+.sr-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+
+.sr-card-saffron::before {
+  background: linear-gradient(90deg, var(--saffron), var(--brass-light));
+}
+
+.sr-card-brass::before {
+  background: linear-gradient(90deg, var(--brass), var(--saffron));
+}
+
+.sr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--brass-border);
+}
+
+.sr-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.sr-num {
+  font-family: 'Cinzel', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--brass);
+}
+
+.sr-card h3 {
+  color: var(--ink-primary);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.sr-role {
+  color: var(--ink-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.sr-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sr-tags span {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--navy-primary);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.8rem;
+  transition: var(--transition);
+}
+
+.sr-card:hover .sr-tags span {
+  border-color: var(--brass-border);
+}
+
+.sr-objective {
+  margin-top: auto;
+  background: var(--brass-subtle);
+  border-left: 4px solid var(--brass);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.1rem 1.25rem;
+}
+
+.sr-card-saffron .sr-objective {
+  background: var(--saffron-subtle);
+  border-left-color: var(--saffron);
+}
+
+.sr-objective-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 0.4rem;
+}
+
+.sr-card-saffron .sr-objective-label {
+  color: var(--saffron);
+}
+
+.sr-objective p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .sr-card {
+    padding: 1.5rem;
+  }
+  .sr-num {
+    font-size: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    DUAL-DESK CONTACT SECTION
    -------------------------------------------------------------------------- */
 .section-desks {
