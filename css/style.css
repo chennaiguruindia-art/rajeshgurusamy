@@ -809,6 +809,18 @@ h1, h2, h3, h4, .serif-title {
 /* --------------------------------------------------------------------------
    DUAL-DESK CONTACT SECTION
    -------------------------------------------------------------------------- */
+.connect-card {
+  cursor: pointer;
+}
+
+.connect-card h4,
+.connect-card .fs-6 {
+  color: var(--ink-primary);
+}
+
+.connect-card .btn-solid-saffron {
+  justify-content: center;
+}
 .section-desks {
   padding: 5rem 0;
   background: #ffffff;
